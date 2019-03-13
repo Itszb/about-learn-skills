@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let obj = {
+            name: '赵斌',
+            age: 18,
+            job: "软件开发工程师"
+        }
+        let jsonStr = JSON.stringify(obj); 
+        //将一个对象转成json格式的字符串
+        // {"name":"赵斌","age":18,"job":"软件开发工程师"}
+
+        let str='{"name":"赵斌","age":18,"job":"软件开发工程师"}';
+        let obj=JSON.parse(str);  //将字符串转成js对象
+        
+    </script>
+</body>
+
+</html>
