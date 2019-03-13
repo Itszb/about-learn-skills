@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 创建数组的方式
+        var arr = new Array();
+
+        // 检测数组
+        Array.isArray(arr);
+
+        // join方法
+        let arr = ['white', 'green', 'red']
+        arr.join('|') // white|green|red
+
+        // push 
+        // 到数组的末尾一个或多个元素 => 进栈操作
+        let arr = [];
+        let length = arr.push(1, 2) // 2  返回push以后数组的长度
+        let length = arr.push(3, 4) // 4
+        let length = arr.push(5) // 5
+        console.log(arr) // [1,2,3,4,5]
+
+        // pop 
+        // 移除数组的最后一项 并返回
+        let arr = [1, 2, 3, 4, 5];
+        arr.pop() // 返回 5  原数组变成[1,2,3,4]
+
+        // sort
+        [1, 2, 3, 7, 3, 4, 9, 12, 5].sort(function (a, b) {
+            return a - b;
+        }) // a-b 正序
+        [1, 2, 3, 7, 3, 4, 9, 12, 5].sort(function (a, b) {
+            return b - a;
+        }) // b-a 倒叙
+
+        // concat
+        let a = [1, 2, 3];
+        let b = [4, 5, 6];
+        console.log(a.concat(b)); // [1,2,3,4,5,6]
+
+        // slice
+        // 该方法的执行不会影响原始数组  这个方法好像没什么意义
+        let arr = ['a', 'b', 'c', 'd', 'e'];
+        console.log(arr.slice(1)); // ["b", "c", "d", "e"]  从位置 1 到最后
+        console.log(arr.slice(1, 4)); // ["b", "c", "d"]       从位置 1 到位置 4(不包括位置4)
+
+        // splice  从一个数组中删除 插入 替换 元素
+        // 删除
+        let arr = [1, 2, 3, 4, 5, 6, 7];
+        let arr1 = arr.splice(1); //从位置1开始删除之后所有的元素 返回删除的元素
+
+        let arr = [1, 2, 3, 4, 5, 6, 7];
+        let arr1 = arr.splice(1, 2); // 从位置1开始删除两个元素 返回删除的元素
+
+        // 插入
+        let arr = [1, 2, 3];
+        let arr1 = arr.splice(1, 0, '89'); //从位置 1 开始删除 0 个插入一个   因为没有删除所以返回空
+        console.log(arr) //[1,89,2,3]
+        console.log(arr1); //[]  返回一个空数组
+        console.log(Array.isArray(arr1)) //true
+
+        // 替换
+        let arr = [1, 2, 3, 4, 5];
+        let arr1 = arr.splice(1, 2, '89'); //从位置1开始删除2个插入一个 返回删除的元素
+        console.log(arr.join(',')) //  1,89,4,5
+        console.log(arr1.join(',')); //2,3
+
+        //迭代函数
+        
+        // every
+        // 对数组中的每一项运行给定函数,如果该函数对每一项都返回true 则返回true
+        let arr = [1, 2, 3, 4, 5, 6];
+        let isBiggerThenZero=arr.every(function(a){
+            if(a>0){
+                return true
+            }else{
+                return false
+            }
+        })
+        console.log(isBiggerThenZero);  //true
+
+        // some和every 类似 他是只要有一项返回了true 他就返回true.
+
+        //filter
+        // 对数组中的每一项运行给定函数 返回 该函数会返回true的项组成的数组
+        let arr = [1, 2, 3, 4, 5, 6];
+        let isBiggerThenZero=arr.filter(function(a){
+            if(a>2){
+                return true
+            }else{
+                return false
+            }
+        })
+        console.log(isBiggerThenZero.join(','));  //  3,4,5,6
+
+        //forEach()
+        //对数组中每一项运行给定函数这个方法没有返回值.
+
+        //map()
+        //对数组中每一项运行给定函数,返回每次函数调用的结果组成的数组
+        let arr = [1, 2, 3, 4, 5, 6];
+        let isBiggerThenZero=arr.map(function(a){
+            return a+1
+        })
+        console.log(isBiggerThenZero.join(','));  //  2,3,4,5,6,7
+
+
+    </script>
+</body>
+
+</html>
