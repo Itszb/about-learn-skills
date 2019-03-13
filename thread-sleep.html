@@ -12,7 +12,6 @@
     <script>
         //线程沉睡效果 
         const sleep = require('thread-sleep');
-
         router.get('/', (ctx, next) => {
             sleep(2000);
             ctx.body = 'hello world';
