@@ -7,9 +7,26 @@
     <title>Document</title>
 </head>
 <body>
-    <script>    
-                
-    
+    <script>
+        let now = Date.now();
+        let now1 = +new Date();
+        //上面两句代码效果相同
+        console.log(now) //  1552485937958  毫秒数  当前时间
+        console.log(now1)
+
+
+        let date=new Date();
+        console.log(date.getFullYear());    // 2019  年
+        console.log(date.getMonth());       // 2     月 (由于月的范围是 0-11 所以 2 其实是 3月)
+        console.log(date.getDate());        // 13    日
+        console.log(date.getDay());         // 3     星期3
+        console.log(date.getHours())        // 22    22点
+        console.log(date.getMinutes())      // 11    11分
+        console.log(date.getSeconds())      // 26    26秒
+        console.log(date.getMilliseconds()) // 390   390毫秒
+
+        let date1=new Date("2019-3-13 22:10:10");
+        console.log(+date1)  // 1552486210000  2019/3/13 22:10:10    
     </script>
 </body>
 </html>
