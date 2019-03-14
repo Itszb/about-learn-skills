@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+
+<body>
+  <style>
+    div {
+      margin: 10px 10px 10px 10px;
+      /* 上 右  下  左 */
+      margin: 10px 10px;
+      /* 上下  左右 */
+    }
+
+    /* 选择器的类型 */
+
+    /* 简单选择器 (Simple selectors)*/
+      通过 元素类型 ( div  h1  h2  p  span )
+      通过 class
+      通过 Id 
+      来选择一个或多个元素
+    
+    /* 属性选择器 (Attribute selectors)*/
+      [class]       选择所有包含class属性的元素
+      [class="a"]   选择class属性值=a的元素
+      [class~="a"]  选择class属性值里 有 a 的元素
+      /* 子串值 属性选择器 */
+      [data-value|="fuckme"]  选中下面的第一和第三项
+        <p class="a" data-value="fuckme"></p>
+        <p class="b a" data-value="fuckmeyou"></p>
+        <p class="c" data-value="fuckme-andyou"></p>
+      [data-value^="fuckme"] 选中以fuckme 开头 并且包括fuckme的元素 
+      [data-value$="fuckme"] 选中以fuckme 结尾 并且包括fuckme的元素
+      [data-value*="you"] 对应的属性值中只要有 you 就会被选中
+    /* 伪类选择器 (Pseudo-classes) */
+      伪类前面是一个冒号
+      当你希望样式在特定状态下才被呈现到指定的元素时,你可以往元素的选择器后面加上对应的伪类
+      :active
+      :any
+      :checked
+      :default
+      :dir()
+      :disabled
+      :empty
+      :enabled
+      :first
+      :first-child
+      :first-of-type
+      :fullscreen
+      :focus
+      :hover
+      :indeterminate
+      :in-range
+      :invalid
+      :lang()
+      :last-child
+      :last-of-type
+      :left
+      :link
+      :not()
+      :nth-child()
+      :nth-last-child()
+      :nth-last-of-type()
+      :nth-of-type()
+      :only-child
+      :only-of-type
+      :optional
+      :out-of-range
+      :read-only
+      :read-write
+      :required
+      :right
+      :root
+      :scope
+      :target
+      :valid
+      :visited
+    /* 伪元素选择器 (Pseudo-elements) */
+      伪元素前面是两个冒号
+      ::after
+      ::before
+      ::first-letter
+      ::first-line
+      ::selection
+      ::backdrop
+    /* 组合选择器 ( Combinators ) */
+      选择器组         A,B
+      后代选择器        A B    匹配B元素，满足条件：B是A的后代结点
+      子选择器         A > B   匹配B元素，满足条件：B是A的直接子节点
+      相邻兄弟选择器    A + B   匹配B元素，满足条件：B是A的下一个兄弟节点（AB有相同的父结点，并且B紧跟在A的后面）(只会选中一个元素)
+      通用兄弟选择器    A ~ B   匹配B元素，满足条件：B是A之后的兄弟节点中的任意一个（AB有相同的父节点，B在A之后，但不一定是紧挨着A） 
+    /* 多重选择器 ( Multiple selectors) */
+
+    /* 通用选择器 (* 选择所有元素) */
+
+
+
+    /* em 单位会继承父元素的字体大小 */
+    /* font-size :200% 百分比字体大小也是相对于父元素字体大小的 */
+  </style>
+
+
+
+
+</body>
+
+</html>
