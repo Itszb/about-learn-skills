@@ -74,32 +74,32 @@
         console.log(arr1.join(',')); //2,3
 
         //迭代函数
-        
+
         // every
         // 对数组中的每一项运行给定函数,如果该函数对每一项都返回true 则返回true
         let arr = [1, 2, 3, 4, 5, 6];
-        let isBiggerThenZero=arr.every(function(a){
-            if(a>0){
+        let isBiggerThenZero = arr.every(function (a) {
+            if (a > 0) {
                 return true
-            }else{
+            } else {
                 return false
             }
         })
-        console.log(isBiggerThenZero);  //true
+        console.log(isBiggerThenZero); //true
 
         // some和every 类似 他是只要有一项返回了true 他就返回true.
 
         //filter
         // 对数组中的每一项运行给定函数 返回 该函数会返回true的项组成的数组
         let arr = [1, 2, 3, 4, 5, 6];
-        let isBiggerThenZero=arr.filter(function(a){
-            if(a>2){
+        let isBiggerThenZero = arr.filter(function (a) {
+            if (a > 2) {
                 return true
-            }else{
+            } else {
                 return false
             }
         })
-        console.log(isBiggerThenZero.join(','));  //  3,4,5,6
+        console.log(isBiggerThenZero.join(',')); //  3,4,5,6
 
         //forEach()
         //对数组中每一项运行给定函数这个方法没有返回值.
@@ -107,12 +107,37 @@
         //map()
         //对数组中每一项运行给定函数,返回每次函数调用的结果组成的数组
         let arr = [1, 2, 3, 4, 5, 6];
-        let isBiggerThenZero=arr.map(function(a){
-            return a+1
+        let isBiggerThenZero = arr.map(function (a) {
+            return a + 1
         })
-        console.log(isBiggerThenZero.join(','));  //  2,3,4,5,6,7
+        console.log(isBiggerThenZero.join(',')); //  2,3,4,5,6,7
+
+        //... spread 展开运算符
+        let arr = [1, 2, 3];
+        let arr1 = [89];
+        arr1.push(arr); // [ 89 , [1,2,3] ]   如果这样你是将数组arr插入到了 arr1中
+
+        let arr = [1, 2, 3];
+        let arr1 = [89];
+        arr1.push(...arr); //[89, 1, 2, 3]Ó
+
+        
+        function add(a, b, c) {
+            console.log(a);
+            console.log(b);
+            console.log(c);
+        }
+        //用户函数的参数
+        console.log(add(...[1, 2, 3, ])); //  1   2    3Ó
 
 
+        // Array.from()
+        // 可以将类数组对象转化成 真正的数组
+        //  querySelectAll()返回的nodelist  和函数的 arguments
+
+
+        // Array.of(1,2,3)  ==> [1,2,3]
+        // 用户将一组值转换为数组.
     </script>
 </body>
 
